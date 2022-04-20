@@ -4,9 +4,23 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>task1</title>
 </head>
 <body>
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <script>
+        var svg = d3.select("body").append("svg");
+        d3.csv("https://harumiyomiyo.github.io/InfoVisualization2022/W04/w04_task1.csv",
 
+            function(data){
+            svg.selectAll("circle")
+                .data(data)
+                .enter()
+                .append("circle")
+                .attr("cx", function(d){ return d.x; })
+                .attr("cy", function(d){ return d.y; })
+                .attr("r", function(d){ return d.r; })
+            } );
+    </script>
 </body>
 </html>

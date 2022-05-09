@@ -6,7 +6,7 @@ d3.csv("https://harumiyomiyo.github.io/InfoVisualization2022/W04/w04_task1.csv")
             parent: '#drawing_region',
             width: 256,
             height: 256,
-            margin: { top: 100, right: 50, bottom: 50, left: 50 }
+            margin: { top: 20, right: 100, bottom: 50, left: 50 }
         };
 
         const scatter_plot = new ScatterPlot(config, data);
